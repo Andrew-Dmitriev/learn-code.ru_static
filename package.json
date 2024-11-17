@@ -5,7 +5,6 @@
 	"description": "",
 	"main": "index.html",
 	"scripts": {
-		"WATCH:ALL": "npm run watch:less & npm run watch:css & npm run watch:js & npm run watch:html_min",
 		"BUILD": "npm run CLEAR_DIST && npm run html_min && npm run less && npm run csso && npm run uglifyjs && npm run optimize_img && npm run copy && echo 'BUILD COMPLETE'",
 		"CLEAR_DIST": "rm -rf ./dist/*",
 		"html_min": "html-minifier-terser ./index.html -o dist/index.html --collapse-whitespace --remove-comments --minify-css --minify-js true && html-minifier-terser --input-dir sections/css/ --output-dir dist/sections/css/ --collapse-whitespace --remove-comments --minify-css --minify-js true && html-minifier-terser --input-dir sections/etc/ --output-dir dist/sections/etc --collapse-whitespace --remove-comments --minify-css --minify-js true && html-minifier-terser --input-dir sections/html/ --output-dir dist/sections/html --collapse-whitespace --remove-comments --minify-css --minify-js true && html-minifier-terser --input-dir sections/javascript/ --output-dir dist/sections/javascript --collapse-whitespace --remove-comments --minify-css --minify-js true",
@@ -13,11 +12,7 @@
 		"csso": "csso ./styles/main.css -o ./dist/main.css",
 		"uglifyjs": "uglifyjs main.js --compress --toplevel -o ./dist/main.js",
 		"optimize_img": "imagemin img/etc/*.* --plugin.webp.quality=80 --out-dir=./dist/img/etc/ && imagemin ./img/css/*.* --plugin.webp.quality=80 --out-dir=./dist/img/css/ && imagemin ./img/html/*.* --plugin.webp.quality=80 --out-dir=./dist/img/html/ && imagemin ./img/javascript/*.* --plugin.webp.quality=80 --out-dir=./dist/img/javascript/",
-		"copy": "cp ./*.{ico,png} ./dist && cp -rf ./img/*.{webp,png} ./dist/img && cp -rf ./fonts ./dist && mkdir ./dist/img/promo/ && cp -rf ./img/promo/eurobyte ./dist/img/promo/eurobyte",
-		"watch:less": "onchange './styles/main.less' -- npm run less",
-		"watch:css": "onchange './styles/main.css' -- npm run csso",
-		"watch:html_min": "onchange './index.html' './sections/css/*.html' './sections/html/*.html' './sections/javascript/*.html' './sections/etc/*.html' -- npm run html_min",
-		"watch:js": "onchange './main.js' -- npm run uglifyjs"
+		"copy": "cp ./*.{ico,png} ./dist && cp -rf ./img/*.{webp,png} ./dist/img && cp -rf ./fonts ./dist && mkdir ./dist/img/promo/ && cp -rf ./img/promo/eurobyte ./dist/img/promo/eurobyte"
 	},
 	"devDependencies": {
 		"csso-cli": "^4.0.2",
@@ -25,7 +20,6 @@
 		"imagemin-cli": "^8.0.0",
 		"imagemin-webp": "^8.0.0",
 		"less": "^4.2.0",
-		"onchange": "^7.1.0",
 		"uglify-js": "^3.19.3"
 	}
 }
