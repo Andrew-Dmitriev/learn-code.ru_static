@@ -1,3 +1,43 @@
-@media (min-width: 577px) and (max-width: 1000px) {
-
+@import url(./vars);
+@media (min-width: 577px) {
+	header {
+		img {
+			width:        25%;
+			height:       65px;
+			float:        left;
+			border:       #459364 1px solid;
+			border-right: none;
+		}
+		nav[aria-label="Главная"] {
+			ul {
+				background-color: @bg-color-grey;
+				display:          flex;
+				justify-content:  space-evenly;
+				align-items:      center;
+				font-size:        22px;
+				text-transform:   uppercase;
+				li {
+					width: 100%;
+					a {
+						display:    inline-block;
+						text-align: center;
+						width:      100%;
+						padding:    15px 0;
+					}
+				}
+			}
+		}
+	}
+}
+@media (min-width: 1000px) {
+	body {
+		grid-template-areas:
+			"h h h h h"
+			"m m m m a"
+			"m m m m a"
+			"f f f f f";
+	}
+	article {
+		width: 100%;
+	}
 }
