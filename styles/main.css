@@ -188,8 +188,6 @@ h6 {
   font-family: "sf_regular", "Arial", sans-serif;
 }
 body {
-  display: grid;
-  grid-template-areas: "h" "m" "a" "f";
   margin: 0 5px;
 }
 header {
@@ -281,10 +279,34 @@ footer {
   }
 }
 @media (min-width: 1000px) {
-  body {
-    grid-template-areas: "h h h h h" "m m m m a" "m m m m a" "f f f f f";
+  main {
+    gap: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
   }
-  article {
+  main h2 {
     width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    color: #37a6f0;
+  }
+}
+body {
+  display: grid;
+  grid-template-areas: "h" "m" "a" "f";
+}
+article {
+  max-width: 400px;
+}
+@media (min-width: 1000px) {
+  aside {
+    min-width: 350px;
+    background-color: #373438;
+  }
+  body {
+    display: grid;
+    gap: 20px;
+    grid-template-areas: "h h h h h h h h h" "m m m m m m m m a" "m m m m m m m m a" "f f f f f f f f f";
   }
 }

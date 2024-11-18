@@ -25,10 +25,16 @@
   }
 }
 @media (min-width: 1000px) {
-  body {
-    grid-template-areas: "h h h h h" "m m m m a" "m m m m a" "f f f f f";
+  main {
+    gap: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
   }
-  article {
+  main h2 {
     width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    color: #37a6f0;
   }
 }
