@@ -12,7 +12,7 @@
 		"csso": "csso ./styles/main.css -o ./dist/main.css",
 		"uglifyjs": "uglifyjs main.js --compress --toplevel -o ./dist/main.js",
 		"optimize_img": "imagemin img/new/*.* --plugin.webp.quality=80 --out-dir=./img/forDist/",
-		"copy": "cp ./*.{ico,png} ./dist & mv ./img/new/*.* ./img/src/ & mkdir ./dist/img & cp ./img/forDist/*.* ./dist/img/ & cp -r ./fonts ./dist & mkdir ./dist/img/promo & cp -r  ./img/promo/eurobyte ./dist/img/promo/eurobyte & cp ./img/*.* ./dist/img/ & cp ./.htaccess ./dist"
+		"copy": "cp ./*.{ico,png} ./dist & mv ./img/new/*.* ./img/src/ & mkdir ./dist/img & cp ./img/forDist/*.* ./dist/img/ & cp -r ./fonts ./dist & mkdir ./dist/img/promo & mkdirp ./dist/img/promo & cp -r  ./img/promo/eurobyte/ ./dist/img/promo/eurobyte & cp ./img/*.* ./dist/img/ & cp ./.htaccess ./dist"
 	},
 	"devDependencies": {
 		"csso-cli": "^4.0.2",
