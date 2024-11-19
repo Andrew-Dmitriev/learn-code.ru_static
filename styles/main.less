@@ -3,7 +3,7 @@
 html {
 	font-family:      "sf_regular", "Arial", sans-serif;
 	background-color: @bg-color-dark;
-	font-size:        16px;
+	font-size:        14px;
 	color:            @text-color;
 }
 a {
@@ -20,7 +20,7 @@ h1, h2, h3, h4, h5, h6 {
 	font-family: "sf_regular", "Arial", sans-serif;
 }
 body {
-	margin:             0 10px;
+	margin: 0 10px;
 }
 header {
 	box-shadow: @shadow-color 0 0 5px;
@@ -55,16 +55,16 @@ header {
 }
 main {
 	h2 {
-		text-align: center;
+		text-align:     center;
 		text-transform: uppercase;
-		margin: 20px 0 5px 0;
-		color:          #37a6f0;
+		margin:         20px 0 5px 0;
+		color:          #ffffff;
 		vertical-align: baseline;
 	}
 	article {
 		background-color: @bg-color-grey;
 		padding:          5px;
-		margin-bottom: 20px;
+		margin-bottom:    20px;
 		h3 {
 			text-align:    center;
 			margin-bottom: 10px;
@@ -74,6 +74,7 @@ main {
 		figure {
 			figcaption {
 				margin-top: 5px;
+				text-align: center;
 			}
 		}
 		.publish-date {
@@ -82,17 +83,21 @@ main {
 	}
 }
 aside {
+	text-align:       center;
+	background-color: @bg-color-grey;
+	border:           #459364 1px solid;
+	box-shadow: @shadow-color 0 0 5px;
+	padding: 5px;
 	h4 {
-		text-align: center;
-		margin-bottom: 5px;
-	}
+	margin-bottom:    5px;
+}
 }
 footer {
 	background-color: @bg-color-grey;
-	padding: 0 5px;
+	padding:          0 10px;
 	margin:           0 -10px;
 	border-top:       #459364 1px solid;
 	box-shadow:       @shadow-color 0 0 5px;
 	margin-top:       25px;
 }
-@import url(./media);
+@import "grid";

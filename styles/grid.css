@@ -1,0 +1,42 @@
+@media only screen and (min-width: 577px) and (max-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+  body {
+    margin: 0 20px;
+  }
+  header img {
+    display: inline-block;
+    float: left;
+    width: 20%;
+    height: 62px;
+    border: #459364 1px solid;
+    border-right: none;
+  }
+  main article {
+    padding: 15px;
+    margin-bottom: 22px;
+  }
+  main article figure img {
+    max-width: 512px;
+    max-height: 360px;
+    margin: 0 auto;
+  }
+  main article figure figcaption {
+    text-align: center;
+    margin-top: 5px;
+  }
+  main article .publish-date {
+    text-align: center;
+  }
+  aside {
+    padding: 15px;
+  }
+  aside h4 {
+    margin-bottom: 10px;
+  }
+  footer {
+    padding: 10px 20px 5px 20px;
+    margin: 22px -20px 0 -20px;
+  }
+}
