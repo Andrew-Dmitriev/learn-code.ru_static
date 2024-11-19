@@ -45,9 +45,111 @@
 	footer {
 		padding:          10px 20px 5px 20px;
 		margin:           22px -20px 0 -20px;
+		font-size: 18px;
 	}
 }
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
+	//TODO остановились на этом разрешении
+html {
+	font-family:      "sf_regular", "Arial", sans-serif;
+	background-color: @bg-color-dark;
+	font-size:        14px;
+	color:            @text-color;
+}
+a {
+	text-decoration: none;
+	color:           #a1d8ff;
+	transition:      color .15s;
+	&:hover {
+		color: #37a6f0;
+	}
+}
+h1, h2, h3, h4, h5, h6 {
+	font-size:   20px;
+	color:       #ffffff;
+	font-family: "sf_regular", "Arial", sans-serif;
+}
+body {
+	margin: 0 10px;
+}
+header {
+	box-shadow: @shadow-color 0 0 5px;
+	img {
+		width:      100%;
+		max-height: 200px;
+	}
+	nav[aria-label="Главная"] {
+		ul {
+			background-color: @bg-color-grey;
+			display:          flex;
+			justify-content:  space-evenly;
+			align-items:      center;
+			font-size:        20px;
+			text-transform:   uppercase;
+			&:last-child {
+				border-right: #459364 1px solid;
+			}
+			li {
+				width:        100%;
+				border:       #459364 1px solid;
+				border-right: none;
+				a {
+					display:    inline-block;
+					text-align: center;
+					width:      100%;
+					padding:    15px 5px;
+				}
+			}
+		}
+	}
+}
+main {
+	h2 {
+		text-align:     center;
+		text-transform: uppercase;
+		margin:         20px 0 5px 0;
+		color:          #ffffff;
+		vertical-align: baseline;
+	}
+	article {
+		background-color: @bg-color-grey;
+		padding:          5px;
+		margin-bottom:    20px;
+		h3 {
+			text-align:    center;
+			margin-bottom: 10px;
+		}
+		border:           #459364 1px solid;
+		box-shadow:       @shadow-color 0 0 5px;
+		figure {
+			figcaption {
+				margin-top: 5px;
+				text-align: center;
+			}
+		}
+		.publish-date {
+			text-align: center;
+		}
+	}
+}
+aside {
+	text-align:       center;
+	background-color: @bg-color-grey;
+	border:           #459364 1px solid;
+	box-shadow: @shadow-color 0 0 5px;
+	padding: 5px;
+	h4 {
+	margin-bottom:    5px;
+}
+}
+footer {
+	background-color: @bg-color-grey;
+	padding:          0 10px;
+	margin:           0 -10px;
+	border-top:       #459364 1px solid;
+	box-shadow:       @shadow-color 0 0 5px;
+	margin-top:       25px;
+}
 }
 @media only screen and (min-width: 1025px) and (max-width: 1440px) {
 }
