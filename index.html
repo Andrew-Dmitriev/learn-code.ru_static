@@ -29,8 +29,9 @@
 		}
 	</style>
 	<link rel="preload" href="./main.css" as="style" onload="this.rel='stylesheet'">
+	<script src="main.js" defer></script>
+	<script src="./pagefind/pagefind-ui.js" defer></script>
 	<title>Learn code</title>
-	<script src="./main.js" defer></script>
 	<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
 	<link rel="apple-touch-icon" href="./apple-touch-icon.png">
 	<link rel="apple-touch-icon" sizes="72x72" href="./apple-touch-icon-72x72.png">
@@ -56,7 +57,6 @@
 	<meta property="og:image:width" content="1200">
 	<meta property="og:image:height" content="630">
 </head>
-
 <body>
 <header>
 	<h1 class="visually-hidden">
@@ -79,22 +79,16 @@
 			</li>
 		</ul>
 	</nav>
+	<div id="search" aria-label="Поиск по сайту"></div>
 </header>
 <!-- htmlmin:ignore -->
 <!-- htmlmin:ignore -->
 <!--TODO настроить поиск-->
+<!--TODO сделать Sitemap по правилам https://yandex.ru/support/webmaster/controlling-robot/sitemap.html и robots.txt https://yandex.ru/support/search-results/?service=webmaster&query=robots.txt-->
 <!--TODO иконки для разделов сайта-->
 <!--TODO Сделать модули для сайта: 1) Кнопка вверх с плавной прокруткой на чистом JS; 2) кнопки поделиться, список ссылок на share страницы не запрещённых в РФ соцсетей и месенджеров с иконками; 3) Форма отправки по эл. почте;-->
 <main>
 	<!--	TODO  убрать поиск из html, распихать по js и css-->
-	<link href="./pagefind/pagefind-ui.css" rel="stylesheet">
-<script src="./pagefind/pagefind-ui.js"></script>
-<div id="search"></div>
-<script>
-    window.addEventListener('DOMContentLoaded', (event) => {
-        new PagefindUI({ element: "#search", showSubResults: true });
-    });
-</script>
 	<h2>Последние статьи</h2>
 	<article itemscope itemtype="https://schema.org/NewsArticle">
 		<h3 itemprop="headline">Самые популярные языки программирования</h3>
@@ -128,12 +122,92 @@
 			<time itemprop="datePublished" content="2024-11-22T22:22:22+03:00" datetime="2024-11-23T22:22:22+03:00">23 ноября 2024 года</time>
 		</p>
 	</article>
+	<article itemscope itemtype="https://schema.org/NewsArticle">
+		<h3 itemprop="headline">Как быстро выучить HTML?</h3>
+		<a href="./sections/html/kak-bystro-vyuchit-html.html">
+			<figure>
+				<!--suppress HtmlUnknownTarget -->
+				<img itemprop="image" src="./img/kak-bystro-vyuchit-html.webp" alt="Логотип языка разметки html версии 5">
+				<figcaption>
+					Быстрые способы изучения языка разметки HTML
+				</figcaption>
+			</figure>
+		</a>
+		<p class="publish-date">
+			Дата публикации:
+			<time itemprop="datePublished" content="2024-11-22T22:22:22+03:00" datetime="2024-11-23T22:22:22+03:00">23 ноября 2024 года</time>
+		</p>
+	</article>
+	<article itemscope itemtype="https://schema.org/NewsArticle">
+		<h3 itemprop="headline">Как быстро выучить HTML?</h3>
+		<a href="./sections/html/kak-bystro-vyuchit-html.html">
+			<figure>
+				<!--suppress HtmlUnknownTarget -->
+				<img itemprop="image" src="./img/kak-bystro-vyuchit-html.webp" alt="Логотип языка разметки html версии 5">
+				<figcaption>
+					Быстрые способы изучения языка разметки HTML
+				</figcaption>
+			</figure>
+		</a>
+		<p class="publish-date">
+			Дата публикации:
+			<time itemprop="datePublished" content="2024-11-22T22:22:22+03:00" datetime="2024-11-23T22:22:22+03:00">23 ноября 2024 года</time>
+		</p>
+	</article>
+	<article itemscope itemtype="https://schema.org/NewsArticle">
+		<h3 itemprop="headline">Как быстро выучить HTML?</h3>
+		<a href="./sections/html/kak-bystro-vyuchit-html.html">
+			<figure>
+				<!--suppress HtmlUnknownTarget -->
+				<img itemprop="image" src="./img/kak-bystro-vyuchit-html.webp" alt="Логотип языка разметки html версии 5">
+				<figcaption>
+					Быстрые способы изучения языка разметки HTML
+				</figcaption>
+			</figure>
+		</a>
+		<p class="publish-date">
+			Дата публикации:
+			<time itemprop="datePublished" content="2024-11-22T22:22:22+03:00" datetime="2024-11-23T22:22:22+03:00">23 ноября 2024 года</time>
+		</p>
+	</article>
+	<article itemscope itemtype="https://schema.org/NewsArticle">
+		<h3 itemprop="headline">Как быстро выучить HTML?</h3>
+		<a href="./sections/html/kak-bystro-vyuchit-html.html">
+			<figure>
+				<!--suppress HtmlUnknownTarget -->
+				<img itemprop="image" src="./img/kak-bystro-vyuchit-html.webp" alt="Логотип языка разметки html версии 5">
+				<figcaption>
+					Быстрые способы изучения языка разметки HTML
+				</figcaption>
+			</figure>
+		</a>
+		<p class="publish-date">
+			Дата публикации:
+			<time itemprop="datePublished" content="2024-11-22T22:22:22+03:00" datetime="2024-11-23T22:22:22+03:00">23 ноября 2024 года</time>
+		</p>
+	</article>
+	<article itemscope itemtype="https://schema.org/NewsArticle">
+		<h3 itemprop="headline">Как быстро выучить HTML?</h3>
+		<a href="./sections/html/kak-bystro-vyuchit-html.html">
+			<figure>
+				<!--suppress HtmlUnknownTarget -->
+				<img itemprop="image" src="./img/kak-bystro-vyuchit-html.webp" alt="Логотип языка разметки html версии 5">
+				<figcaption>
+					Быстрые способы изучения языка разметки HTML
+				</figcaption>
+			</figure>
+		</a>
+		<p class="publish-date">
+			Дата публикации:
+			<time itemprop="datePublished" content="2024-11-22T22:22:22+03:00" datetime="2024-11-23T22:22:22+03:00">23 ноября 2024 года</time>
+		</p>
+	</article>
 </main>
 <aside>
+	<section>
 		<h4>
 			Информация от партнёров
 		</h4>
-	<section>
 		<figure>
 			<a href="https://eurobyte.ru/?referer=173564" target="_blank" rel="nofollow,sponsored">
 				<img src="./img/promo_eurobyte_512x512.webp">
@@ -147,8 +221,8 @@
 <footer itemscope itemtype="https://schema.org/Person">
 	<p itemprop="author">
 		&copy; Разработка и оформление сайта <span itemprop="name">Andrew Dmitriev</span> 2024
+		<a itemprop="email" rel="nofollow,noindex" href="mailto:mai.@learn-code.ru">&#128231; Контакты</a>
 	</p>
-		<a itemprop="email" href="mailto:mai.@learn-code.ru">&#128231; Контакты</a>
 </footer>
 </body>
 </html>

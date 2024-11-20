@@ -3,31 +3,30 @@
 html {
 	font-family:      "sf_regular", "Arial", sans-serif;
 	background-color: @bg-color-dark;
-	font-size:        14px;
+	font-size:        16px;
 	color:            @text-color;
-	color:            #393939;
 }
 a {
 	text-decoration: none;
 	color:           #a1d8ff;
-	transition:      color .15s;
+	transition:      color .2s;
 	&:hover {
-		color: #37a6f0;
+		color: darken(#37a6f0, 20%);
 	}
 }
 h1, h2, h3, h4, h5, h6 {
-	font-size:   20px;
+	font-size:   18px;
 	color:       #ffffff;
-	font-family: "sf_regular", "Arial", sans-serif;
 }
 body {
 	margin: 0 10px;
 }
 header {
-	box-shadow: @shadow-color 0 0 5px;
 	img {
 		width:      100%;
 		max-height: 200px;
+		border:           #459364 1px solid;
+		border-bottom: none;
 	}
 	nav[aria-label="Главная"] {
 		ul {
@@ -41,14 +40,20 @@ header {
 				border-right: #459364 1px solid;
 			}
 			li {
-				width:        100%;
-				border:       #459364 1px solid;
-				border-right: none;
+				width:            100%;
+				border:           #459364 1px solid;
+				border-right:     none;
+				background-color: @bg-color-grey;
+				transition: background-color .2s;
+				&:hover {
+					background-color: darken(#373438, 5%);
+				}
 				a {
-					display:    inline-block;
-					text-align: center;
-					width:      100%;
-					padding:    15px 5px;
+					font-family: "fira_code", "Arial", sans-serif;
+					display:     inline-block;
+					text-align:  center;
+					width:       100%;
+					padding:     15px 5px;
 				}
 			}
 		}
@@ -58,14 +63,14 @@ main {
 	h2 {
 		text-align:     center;
 		text-transform: uppercase;
-		margin:         20px 0 5px 0;
+		margin:         10px 0 5px 0;
 		color:          #ffffff;
 		vertical-align: baseline;
 	}
 	article {
 		background-color: @bg-color-grey;
-		padding:          5px;
-		margin-bottom:    20px;
+		padding:          10px;
+		margin-bottom: 15px;
 		h3 {
 			text-align:    center;
 			margin-bottom: 10px;
@@ -85,38 +90,23 @@ main {
 }
 aside {
 	text-align:       center;
-	background-color: @bg-color-grey;
 	border:           #459364 1px solid;
-	box-shadow: @shadow-color 0 0 5px;
-	padding: 5px;
+	box-shadow:       @shadow-color 0 0 5px;
+	padding:          5px;
+	background-color: @bg-color-grey;
 	img {
 		margin: 0 auto;
 	}
 	h4 {
-	margin-bottom:    5px;
-}
+		margin-bottom: 5px;
+	}
 }
 footer {
 	background-color: @bg-color-grey;
 	padding:          0 10px;
-	margin:           0 -10px;
+	margin:           15px -10px 0 -10px;
 	border-top:       #459364 1px solid;
 	box-shadow:       @shadow-color 0 0 5px;
-	margin-top:       25px;
 }
 @import "grid";
-
-// From pagefind
-:root {
-	--pagefind-ui-scale: .8;
-	--pagefind-ui-primary: #393939;
-	--pagefind-ui-text: @shadow-color;
-	--pagefind-ui-background: #ffffff;
-	--pagefind-ui-border: #eeeeee;
-	--pagefind-ui-tag: #eeeeee;
-	--pagefind-ui-border-width: 2px;
-	--pagefind-ui-border-radius: 8px;
-	--pagefind-ui-image-border-radius: 8px;
-	--pagefind-ui-image-box-ratio: 3 / 2;
-	--pagefind-ui-font: system, -apple-system, "BlinkMacSystemFont", ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", "Ubuntu", "arial", sans-serif
-}
+@import "search";
