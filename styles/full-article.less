@@ -1,0 +1,53 @@
+@import "vars";
+main.article-page-main {
+	h2 {
+		text-align:     center;
+		text-transform: uppercase;
+		margin:         10px 0 5px 0;
+		color:          #ffffff;
+		vertical-align: baseline;
+	}
+	article {
+		grid-column:      1 / -1;
+		background-color: @bg-color-grey;
+		h2 {
+			margin: 0 0 20px 0;
+		}
+		h3, h4, h5, h6 {
+			margin:     10px 0;
+			text-align: center;
+		}
+		img {
+			margin: 0 auto;
+		}
+		ul {
+			width:         max-content;
+			list-style:    disc;
+			font-weight:   bold;
+			margin:        0 auto 10px;
+		}
+		section.list-of-contents {
+			display:        flex;
+			flex-direction: column;
+			align-items:    center;
+			h3 {
+				margin-bottom: 0;
+			}
+			ul {
+				li {
+					a {
+						display: inline-block;
+						width:   100%;
+					}
+				}
+			}
+		}
+		.publish-date {
+		}
+	}
+}
+footer {
+	p {
+		text-indent: unset;
+	}
+}

@@ -13,6 +13,9 @@
 			position: absolute;
 			white-space: nowrap;
 		}
+		body {
+			background-color: #0c2a31;
+		}
 		@font-face {
 			font-family: 'fira_code';
 			src: url('fonts/firacode-medium.woff2') format('woff2');
@@ -29,12 +32,14 @@
 		}
 	</style>
 	<link rel="preload" href="./main.css" as="style" onload="this.rel='stylesheet'">
-	<script src="main.js" defer></script>
+	<noscript><link rel="stylesheet" href="./main.css"></noscript>
+	<script src="./main.js" defer></script>
 	<script src="./pagefind/pagefind-ui.js" defer></script>
 	<title>Learn code</title>
 	<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
 	<link rel="apple-touch-icon" href="./apple-touch-icon.png">
 	<link rel="apple-touch-icon" sizes="72x72" href="./apple-touch-icon-72x72.png">
+	<link rel="canonical" href="https://learn-code.ru/index.html">
 	<meta name="description" content="Как научиться программировать? Как понять принцип веб и узнать новости индустрии. Всё это и многое другое можно узнать, почитав статьи на сайте learn-code.ru">
 	<meta name="theme-color" content="#37a6f0">
 	<meta name="msapplication-navbutton-color" content="#37a6f0">
@@ -81,14 +86,14 @@
 	</nav>
 	<div id="search" aria-label="Поиск по сайту"></div>
 </header>
-<!-- htmlmin:ignore -->
-<!-- htmlmin:ignore -->
-<!--TODO настроить поиск-->
+<!--TODO Сделать хлебные крошки на страницах разделов и статей, добавить их в live template webstorm-->
+<!--TODO Переделать шрифты на белке, посмотреть высоту строки, сделать под Verdana-->
+<!--TODO сделать фавиконки как у Макеева на сайте вебстандарты-->
 <!--TODO сделать Sitemap по правилам https://yandex.ru/support/webmaster/controlling-robot/sitemap.html и robots.txt https://yandex.ru/support/search-results/?service=webmaster&query=robots.txt-->
 <!--TODO иконки для разделов сайта-->
 <!--TODO Сделать модули для сайта: 1) Кнопка вверх с плавной прокруткой на чистом JS; 2) кнопки поделиться, список ссылок на share страницы не запрещённых в РФ соцсетей и месенджеров с иконками; 3) Форма отправки по эл. почте;-->
+<!--TODO подготовить превью картинок для главной и категорий одинакового размера, сделать картинки под ретину-->
 <main>
-	<!--	TODO  убрать поиск из html, распихать по js и css-->
 	<h2>Последние статьи</h2>
 	<article itemscope itemtype="https://schema.org/NewsArticle">
 		<h3 itemprop="headline">Самые популярные языки программирования</h3>
@@ -106,6 +111,7 @@
 			<time itemprop="datePublished" content="2024-11-22T22:22:22+03:00" datetime="2024-11-22T22:22:22+03:00">22 ноября 2024 года</time>
 		</p>
 	</article>
+
 	<article itemscope itemtype="https://schema.org/NewsArticle">
 		<h3 itemprop="headline">Как быстро выучить HTML?</h3>
 		<a href="./sections/html/kak-bystro-vyuchit-html.html">

@@ -1,10 +1,15 @@
-@import url(./reset);
 @import url(./vars);
+@import url(./reset);
 html {
 	font-family:      "sf_regular", "Arial", sans-serif;
-	background-color: @bg-color-dark;
 	font-size:        16px;
 	color:            @text-color;
+}
+body {
+	margin: 0 10px;
+}
+p {
+	text-indent: 20px;
 }
 a {
 	text-decoration: none;
@@ -16,10 +21,7 @@ a {
 }
 h1, h2, h3, h4, h5, h6 {
 	font-size:   18px;
-	color:       #ffffff;
-}
-body {
-	margin: 0 10px;
+	color:       #fff;
 }
 header {
 	img {
@@ -110,3 +112,4 @@ footer {
 }
 @import "grid";
 @import "search";
+@import "full-article";

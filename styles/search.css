@@ -244,7 +244,7 @@ legend.svelte-1v2r7ls.svelte-1v2r7ls {
   left: calc(8px * var(--pagefind-ui-scale));
   width: 0px;
   height: 0px;
-  border: solid 1px #fff;
+  border: solid 1px #ffffff;
   opacity: 0;
   transform: translate(calc(4.5px * var(--pagefind-ui-scale) * -1), calc(0.8px * var(--pagefind-ui-scale))) skew(-5deg) rotate(-45deg);
   transform-origin: top left;
@@ -336,7 +336,7 @@ legend.svelte-1v2r7ls.svelte-1v2r7ls {
 :root {
   --pagefind-ui-scale: 1;
   --pagefind-ui-primary: #0c2a31;
-  --pagefind-ui-text: #e7e7e7!important;
+  --pagefind-ui-text: #e7e7e7 !important;
   --pagefind-ui-background: #393939;
   --pagefind-ui-border: #393939;
   --pagefind-ui-tag: #393939;
@@ -457,7 +457,12 @@ button.pagefind-ui__search-clear {
   padding-left: 15px !important;
 }
 input.svelte-e9gkc3 {
-  color: #0c2a31 !important;
+  border-top-left-radius: 0 !important;
+  border-top-right-radius: 0 !important;
+  border-right: 1px solid !important;
+  border-left: 1px solid !important;
+  border-top: none !important;
+  border-color: #459364 !important;
 }
 form.pagefind-ui__form::before {
   background-color: #459364 !important;

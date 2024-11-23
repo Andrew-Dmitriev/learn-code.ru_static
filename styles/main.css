@@ -165,9 +165,14 @@ h6 {
 }
 html {
   font-family: "sf_regular", "Arial", sans-serif;
-  background-color: #0c2a31;
   font-size: 16px;
   color: #e7e7e7;
+}
+body {
+  margin: 0 10px;
+}
+p {
+  text-indent: 20px;
 }
 a {
   text-decoration: none;
@@ -184,10 +189,7 @@ h4,
 h5,
 h6 {
   font-size: 18px;
-  color: #ffffff;
-}
-body {
-  margin: 0 10px;
+  color: #fff;
 }
 header img {
   width: 100%;
@@ -329,7 +331,7 @@ footer {
     display: grid;
     gap: 20px;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(12, min-content);
+    grid-template-rows: repeat(3, max-content);
   }
   header {
     grid-column: 1 / -1;
@@ -348,17 +350,20 @@ footer {
     gap: 20px;
     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
     grid-column: 1 / 9;
-    grid-row: 2 / 12;
+    grid-row: 2 / 3;
   }
   main h2 {
     grid-column: 1 / -1;
+  }
+  main article {
+    margin-bottom: 0;
   }
   main article figure img {
     margin: 0 auto;
   }
   aside {
     grid-column: 9 / 13;
-    grid-row: 2 / 12;
+    grid-row: 2 / 3;
   }
   footer {
     grid-column: 1 / -1;
@@ -379,12 +384,15 @@ footer {
   h6 {
     font-size: 24px;
   }
+  p {
+    text-indent: 30px;
+  }
   body {
     margin: 0 30px;
     display: grid;
     gap: 30px;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(12, min-content);
+    grid-template-rows: repeat(3, max-content);
   }
   header {
     grid-column: 1 / -1;
@@ -403,6 +411,7 @@ footer {
     gap: 30px;
     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
     grid-column: 1 / 10;
+    grid-row: 2 / 3;
   }
   main #search {
     grid-column: 1 / -1;
@@ -420,6 +429,7 @@ footer {
     padding: 20px;
     margin-bottom: 0;
     min-width: 350px;
+    align-content: center;
     border: #459364 1px solid;
     box-shadow: #37a6f0 0 0 5px;
   }
@@ -439,7 +449,7 @@ footer {
   }
   aside {
     grid-column: 10 / 13;
-    grid-row: 2 / 12;
+    grid-row: 2 / 3;
     border: #459364 1px solid;
     box-shadow: #37a6f0 0 0 5px;
     padding: 5px;
@@ -450,6 +460,7 @@ footer {
   }
   footer {
     grid-column: 1 / -1;
+    grid-row: 3 / 4;
     padding: 10px 30px;
     margin: 0 -30px;
     border-top: #459364 1px solid;
@@ -702,7 +713,7 @@ legend.svelte-1v2r7ls.svelte-1v2r7ls {
   left: calc(8px * var(--pagefind-ui-scale));
   width: 0px;
   height: 0px;
-  border: solid 1px #fff;
+  border: solid 1px #ffffff;
   opacity: 0;
   transform: translate(calc(4.5px * var(--pagefind-ui-scale) * -1), calc(0.8px * var(--pagefind-ui-scale))) skew(-5deg) rotate(-45deg);
   transform-origin: top left;
@@ -794,7 +805,7 @@ legend.svelte-1v2r7ls.svelte-1v2r7ls {
 :root {
   --pagefind-ui-scale: 1;
   --pagefind-ui-primary: #0c2a31;
-  --pagefind-ui-text: #e7e7e7!important;
+  --pagefind-ui-text: #e7e7e7 !important;
   --pagefind-ui-background: #393939;
   --pagefind-ui-border: #393939;
   --pagefind-ui-tag: #393939;
@@ -915,8 +926,58 @@ button.pagefind-ui__search-clear {
   padding-left: 15px !important;
 }
 input.svelte-e9gkc3 {
-  color: #0c2a31 !important;
+  border-top-left-radius: 0 !important;
+  border-top-right-radius: 0 !important;
+  border-right: 1px solid !important;
+  border-left: 1px solid !important;
+  border-top: none !important;
+  border-color: #459364 !important;
 }
 form.pagefind-ui__form::before {
   background-color: #459364 !important;
+}
+main.article-page-main h2 {
+  text-align: center;
+  text-transform: uppercase;
+  margin: 10px 0 5px 0;
+  color: #ffffff;
+  vertical-align: baseline;
+}
+main.article-page-main article {
+  grid-column: 1 / -1;
+  background-color: #373438;
+}
+main.article-page-main article h2 {
+  margin: 0 0 20px 0;
+}
+main.article-page-main article h3,
+main.article-page-main article h4,
+main.article-page-main article h5,
+main.article-page-main article h6 {
+  margin: 10px 0;
+  text-align: center;
+}
+main.article-page-main article img {
+  margin: 0 auto;
+}
+main.article-page-main article ul {
+  width: max-content;
+  list-style: disc;
+  font-weight: bold;
+  margin: 0 auto 10px;
+}
+main.article-page-main article section.list-of-contents {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main.article-page-main article section.list-of-contents h3 {
+  margin-bottom: 0;
+}
+main.article-page-main article section.list-of-contents ul li a {
+  display: inline-block;
+  width: 100%;
+}
+footer p {
+  text-indent: unset;
 }
