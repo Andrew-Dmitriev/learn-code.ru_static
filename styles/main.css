@@ -132,6 +132,7 @@ canvas,
 svg {
   display: block;
   max-width: 100%;
+  height: auto;
 }
 /* 6. Inherit fonts for form controls */
 input,
@@ -193,7 +194,7 @@ h6 {
 }
 header img {
   width: 100%;
-  max-height: 200px;
+  max-height: 150px;
   border: #459364 1px solid;
   border-bottom: none;
 }
@@ -349,7 +350,7 @@ footer {
     display: grid;
     gap: 20px;
     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-    grid-column: 1 / 9;
+    grid-column: 1 / 8;
     grid-row: 2 / 3;
   }
   main h2 {
@@ -362,7 +363,7 @@ footer {
     margin: 0 auto;
   }
   aside {
-    grid-column: 9 / 13;
+    grid-column: 8 / 13;
     grid-row: 2 / 3;
   }
   footer {
