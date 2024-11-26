@@ -5,13 +5,13 @@
 	"description": "",
 	"main": "index.html",
 	"scripts": {
-		"BUILD": "npm run CLEAR_DIST && npm run html_min && npm run less && npm run csso && npm run uglifyjs && npm run optimize_img && ./pagefind --site dist && npm run copy && echo 'BUILD COMPLETE'",
+		"BUILD": "npm run CLEAR_DIST && npm run html_min && npm run less && npm run purifycss && npm run uglifyjs && npm run optimize_img && ./pagefind --site dist && npm run copy && echo 'BUILD COMPLETE'",
 		"CLEAR_DIST": "rm -rf ./dist/* & rm -rf ./dist/.*",
 		"html_min": "html-minifier-terser ./index.html -o dist/index.html --collapse-whitespace --remove-comments --minify-css --minify-js true && html-minifier-terser --input-dir sections/css/ --output-dir dist/sections/css/ --collapse-whitespace --remove-comments --minify-css --minify-js true && html-minifier-terser --input-dir sections/etc/ --output-dir dist/sections/etc --collapse-whitespace --remove-comments --minify-css --minify-js true && html-minifier-terser --input-dir sections/html/ --output-dir dist/sections/html --collapse-whitespace --remove-comments --minify-css --minify-js true && html-minifier-terser --input-dir sections/javascript/ --output-dir dist/sections/javascript --collapse-whitespace --remove-comments --minify-css --minify-js true",
-		"less": "lessc ./styles/main.less ./styles/main.css",
-		"csso": "csso ./styles/main.css -o ./dist/main.css",
+		"less": "lessc ./styles/main.less main.css",
+		"purifycss": "purifycss styles/main.css index.html sections/**/*.html --min --info --out dist/main.css",
 		"uglifyjs": "uglifyjs main.js --compress --toplevel -o ./dist/main.js",
-		"optimize_img": "imagemin img/new/ --plugin.webp.quality=80 --out-dir=./img/forDist/",
+		"optimize_img": "imagemin img/new/ --plugin.webp.quality=60 --out-dir=./img/forDist/",
 		"copy": "cp ./*.{ico,png} ./dist & mv ./img/new/*.* ./img/src/ & mkdir ./dist/img & cp ./img/forDist/*.* ./dist/img/ & cp -r ./fonts ./dist & cp ./img/*.* ./dist/img/ & cp ./.htaccess ./dist"
 	},
 	"devDependencies": {
@@ -20,6 +20,7 @@
 		"imagemin-cli": "^8.0.0",
 		"imagemin-webp": "^8.0.0",
 		"less": "^4.2.0",
+		"purify-css": "^1.2.5",
 		"uglify-js": "^3.19.3"
 	}
 }

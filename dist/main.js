@@ -1,1 +1,0 @@
-console.log("I ❤️ ️Arch Linux"),window.addEventListener("DOMContentLoaded",event=>{new PagefindUI({element:"#search",showSubResults:!0})});
