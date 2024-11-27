@@ -4,22 +4,38 @@
 	"version": "1.0.0",
 	"description": "",
 	"main": "index.html",
+	"watch": {
+		"less": {
+			"patterns": ["styles/*.less"],
+			"extensions": "less"
+		},
+		"html_min": {
+			"patterns": ["sections/**/*.html", "index.html"],
+			"extensions": "html"
+		},
+		"uglifyjs": "main.js",
+		"purifycss": "./styles/main.css"
+	},
 	"scripts": {
+		"WATCH": "npm-watch & npm run browsersync",
 		"BUILD": "npm run CLEAR_DIST && npm run html_min && npm run less && npm run purifycss && npm run uglifyjs && npm run optimize_img && ./pagefind --site dist && npm run copy && echo 'BUILD COMPLETE'",
 		"CLEAR_DIST": "rm -rf ./dist/* & rm -rf ./dist/.*",
-		"html_min": "html-minifier-terser ./index.html -o dist/index.html --collapse-whitespace --remove-comments --minify-css --minify-js true && html-minifier-terser --input-dir sections/css/ --output-dir dist/sections/css/ --collapse-whitespace --remove-comments --minify-css --minify-js true && html-minifier-terser --input-dir sections/etc/ --output-dir dist/sections/etc --collapse-whitespace --remove-comments --minify-css --minify-js true && html-minifier-terser --input-dir sections/html/ --output-dir dist/sections/html --collapse-whitespace --remove-comments --minify-css --minify-js true && html-minifier-terser --input-dir sections/javascript/ --output-dir dist/sections/javascript --collapse-whitespace --remove-comments --minify-css --minify-js true",
-		"less": "lessc ./styles/main.less main.css",
-		"purifycss": "purifycss styles/main.css index.html sections/**/*.html --min --info --out dist/main.css",
+		"browsersync": "browser-sync start --server 'dist' --files 'dist'",
+		"browsersync-proxy": "browser-sync start --proxy 'learn-code.local' 'dist' --files 'dist'",
+		"html_min": "html-minifier-terser ./index.html -o dist/index.html --collapse-whitespace --remove-comments --minify-css --minify-js true && html-minifier-terser --input-dir sections/ --output-dir dist/sections/ --collapse-whitespace --remove-comments --minify-css --minify-js true",
+		"less": "lessc ./styles/main.less ./styles/main.css",
+		"purifycss": "purifycss styles/main.css main.js index.html sections/**/*.html --min --info --out dist/main.css",
 		"uglifyjs": "uglifyjs main.js --compress --toplevel -o ./dist/main.js",
-		"optimize_img": "imagemin img/new/ --plugin.webp.quality=60 --out-dir=./img/forDist/",
+		"optimize_img": "imagemin img/new/ --plugin.webp.quality=60 --out-dir=./img/forDist/ && imagemin img/forDist/ --plugin.webp.quality=60 --out-dir=dist/img/",
 		"copy": "cp ./*.{ico,png} ./dist & mv ./img/new/*.* ./img/src/ & mkdir ./dist/img & cp ./img/forDist/*.* ./dist/img/ & cp -r ./fonts ./dist & cp ./img/*.* ./dist/img/ & cp ./.htaccess ./dist"
 	},
 	"devDependencies": {
-		"csso-cli": "^4.0.2",
+		"browser-sync": "^3.0.3",
 		"html-minifier-terser": "^7.2.0",
 		"imagemin-cli": "^8.0.0",
 		"imagemin-webp": "^8.0.0",
 		"less": "^4.2.0",
+		"npm-watch": "^0.13.0",
 		"purify-css": "^1.2.5",
 		"uglify-js": "^3.19.3"
 	}

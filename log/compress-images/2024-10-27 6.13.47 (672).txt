@@ -1,0 +1,7 @@
+File from: [img/forDist.{jpg,JPG,jpeg,JPEG,png}]
+
+File to: [dist/img/forDist.{jpg,JPG,jpeg,JPEG,png}]
+
+Compression algorithm: [-]
+
+Description: File does not exist!
