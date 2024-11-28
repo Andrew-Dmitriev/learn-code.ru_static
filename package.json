@@ -27,7 +27,7 @@
 		"purifycss": "purifycss styles/main.css main.js index.html sections/**/*.html --min --info --out dist/main.css",
 		"uglifyjs": "uglifyjs main.js --compress --toplevel -o ./dist/main.js",
 		"optimize_img": "imagemin img/new/ --plugin.webp.quality=60 --out-dir=./img/forDist/ && imagemin img/forDist/ --plugin.webp.quality=60 --out-dir=dist/img/",
-		"copy": "cp ./*.{ico,png} ./dist & mv ./img/new/*.* ./img/src/ & mkdir ./dist/img & cp ./img/forDist/*.* ./dist/img/ & cp -r ./fonts ./dist & cp ./img/*.* ./dist/img/ & cp ./.htaccess ./dist"
+		"copy": "cp ./*.{ico,png,txt,xml} ./dist & mv ./img/new/*.* ./img/src/ & mkdir ./dist/img & cp ./img/forDist/*.* ./dist/img/ & cp -r ./fonts ./dist & cp ./img/*.* ./dist/img/ & cp ./.htaccess ./dist"
 	},
 	"devDependencies": {
 		"browser-sync": "^3.0.3",

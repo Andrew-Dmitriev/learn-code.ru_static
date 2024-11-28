@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+sitemap: https://learn-code.ru/sitemap.xml
