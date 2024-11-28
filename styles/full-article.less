@@ -3,19 +3,22 @@ main.article-page-main {
 	h2 {
 		text-align:     center;
 		text-transform: uppercase;
-		margin:         10px 0 5px 0;
+		margin:         0 5px;
 		color:          #ffffff;
 		vertical-align: baseline;
 	}
 	article {
 		grid-column:      1 / -1;
 		background-color: @bg-color-grey;
-		h2 {
-			margin: 0 0 20px 0;
+		p {
+			margin: 5px 0;
 		}
-		h3, h4, h5, h6 {
+		h2, h3, h4, h5, h6 {
 			margin:     10px 0;
 			text-align: center;
+		}
+		h2:first-child {
+			margin: 0 0 10px 0;
 		}
 		img {
 			margin: 0 auto;

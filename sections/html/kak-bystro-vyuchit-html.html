@@ -4,9 +4,6 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<style>
-		body {
-			display: none;
-		}
 		.visually-hidden {
 			clip: rect(0 0 0 0);
 			clip-path: inset(50%);
@@ -34,10 +31,7 @@
 			font-style: normal;
 		}
 	</style>
-	<link rel="preload" href="../../main.css" as="style" onload="this.rel='stylesheet'">
-	<noscript>
-		<link rel="stylesheet" href="../../main.css">
-	</noscript>
+	<link rel="stylesheet" href="../../main.css">
 	<script src="../../main.js" defer></script>
 	<script src="../../pagefind/pagefind-ui.js" defer></script>
 	<title>Как быстро выучить HTML</title>
@@ -93,7 +87,7 @@
 	<div id="search" aria-label="Поиск по сайту"></div>
 </header>
 <main class="article-page-main">
-	<article itemscope itemtype="https://schema.org/NewsArticle" class="main_full-article">
+	<article itemscope itemtype="https://schema.org/NewsArticle">
 		<h2 itemprop="headline">
 			Как учить
 		</h2>
@@ -154,7 +148,11 @@
 		</h4>
 		<figure>
 			<a href="https://eurobyte.ru/?referer=173564" target="_blank" rel="nofollow,sponsored">
-				<img src="../../img/promo_eurobyte_512x512.webp" alt="Промо баннер хостинга Евробайт">
+				<img src="../../img/promo_eurobyte_512x512.webp"
+						 srcset="img/src/promo_eurobyte_512x512_x2.webp x2"
+						 loading="lazy"
+						 alt="Промо баннер хостинга Евробайт"
+						 width="512" height="512">
 			</a>
 			<figcaption>
 				Надёжный и недорогой хостинг, проверенный временем.
@@ -162,7 +160,6 @@
 		</figure>
 	</section>
 </aside>
-<a href=""></a>
 <footer itemscope itemtype="https://schema.org/Person">
 	<p class="publish-date">
 		Дата публикации:

@@ -123,7 +123,7 @@ table {
 }
 body {
   /* 3. Add accessible line-height */
-  line-height: 1.5;
+  line-height: 1.4;
 }
 img,
 picture,
@@ -252,6 +252,8 @@ main article h3 {
 }
 main article figure img {
   margin: 0 auto;
+  width: 300px;
+  height: 300px;
 }
 main article figure figcaption {
   margin-top: 5px;
@@ -303,8 +305,8 @@ footer {
     margin-bottom: 22px;
   }
   main article figure img {
-    max-width: 512px;
-    max-height: 360px;
+    width: 350px;
+    height: 350px;
     margin: 0 auto;
   }
   main article figure figcaption {
@@ -370,8 +372,13 @@ footer {
   }
   main article {
     margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
   main article figure img {
+    width: 350px;
+    height: 350px;
     margin: 0 auto;
   }
   aside {
@@ -382,6 +389,24 @@ footer {
     grid-column: 1 / -1;
     padding: 5px 20px;
     margin: 0 -20px;
+  }
+}
+@media (min-width: 769px) and (max-width: 1200px) {
+  main {
+    grid-column: 1 / 8;
+    grid-row: 2 / 3;
+  }
+  aside {
+    grid-column: 8 / 13;
+    grid-row: 2 / 3;
+  }
+}
+@media (min-width: 769px) and (max-width: 900px) {
+  main {
+    grid-column: 1 / 7;
+  }
+  aside {
+    grid-column: 7 / 13;
   }
 }
 @media (min-width: 1401px) {
@@ -442,7 +467,9 @@ footer {
     padding: 20px;
     margin-bottom: 0;
     min-width: 350px;
-    align-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     border: #459364 1px solid;
     box-shadow: #37a6f0 0 0 5px;
   }
@@ -452,6 +479,8 @@ footer {
   }
   main article figure img {
     margin: 0 auto;
+    width: 350px;
+    height: 350px;
   }
   main article figure figcaption {
     margin-top: 5px;
@@ -474,7 +503,7 @@ footer {
   footer {
     grid-column: 1 / -1;
     grid-row: 3 / 4;
-    padding: 10px 30px;
+    padding: 5px 30px;
     margin: 0 -30px;
     border-top: #459364 1px solid;
     box-shadow: #37a6f0 0 0 5px;
@@ -483,7 +512,7 @@ footer {
 main.article-page-main h2 {
   text-align: center;
   text-transform: uppercase;
-  margin: 10px 0 5px 0;
+  margin: 0 5px;
   color: #ffffff;
   vertical-align: baseline;
 }
@@ -491,15 +520,19 @@ main.article-page-main article {
   grid-column: 1 / -1;
   background-color: #373438;
 }
-main.article-page-main article h2 {
-  margin: 0 0 20px 0;
+main.article-page-main article p {
+  margin: 5px 0;
 }
+main.article-page-main article h2,
 main.article-page-main article h3,
 main.article-page-main article h4,
 main.article-page-main article h5,
 main.article-page-main article h6 {
   margin: 10px 0;
   text-align: center;
+}
+main.article-page-main article h2:first-child {
+  margin: 0 0 10px 0;
 }
 main.article-page-main article img {
   margin: 0 auto;
