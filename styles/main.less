@@ -1,13 +1,14 @@
+@charset "utf-8";
 @import "vars";
 @import "reset";
 html {
-	font-family:      "sf_regular", "Arial", sans-serif;
-	font-size:        16px;
-	color:            @text-color;
+	font-family: "sf_regular", "Arial", sans-serif;
+	font-size:   16px;
+	color:       @text-color_2;
 }
 img {
 	max-width: 100%;
-	height: auto;
+	height:    auto;
 }
 body {
 	margin: 0 10px;
@@ -24,20 +25,20 @@ a {
 	}
 }
 h1, h2, h3, h4, h5, h6 {
-	font-size:   18px;
-	color:       #fff;
+	font-size: 18px;
+	color:     lighten(@text-color_2, 5%);
 }
 header {
 	margin: 0 -10px 10px -10px;
 	img {
-		width:      100%;
-		max-height: 100px;
-		border:           #459364 1px solid;
+		width:         100%;
+		max-height:    100px;
+		border:        #459364 1px solid;
 		border-bottom: none;
 	}
 	nav[aria-label="Главная"] {
 		ul {
-			background-color: @bg-color-grey;
+			//background-color: @bg-color-grey;
 			display:          flex;
 			justify-content:  space-evenly;
 			align-items:      center;
@@ -51,7 +52,7 @@ header {
 				border:           #459364 1px solid;
 				border-right:     none;
 				background-color: @bg-color-grey;
-				transition: background-color .2s;
+				transition:       background-color .2s;
 				&:hover {
 					background-color: darken(#373438, 5%);
 				}
@@ -66,19 +67,18 @@ header {
 		}
 	}
 }
-
+@import "search";
 main {
 	h2 {
 		text-align:     center;
 		text-transform: uppercase;
 		margin:         10px 0 5px 0;
-		color:          #ffffff;
 		vertical-align: baseline;
 	}
 	article {
-		background-color: @bg-color-grey;
+		background-color: @bg-color-grey_2;
 		padding:          10px;
-		margin-bottom: 15px;
+		margin-bottom:    15px;
 		h3 {
 			text-align:    center;
 			margin-bottom: 10px;
@@ -88,7 +88,7 @@ main {
 		figure {
 			img {
 				margin: 0 auto;
-				width: 300px;
+				width:  300px;
 				height: 300px;
 			}
 			figcaption {
@@ -102,11 +102,12 @@ main {
 	}
 }
 aside {
+	color:            @text-color_2;
+	background-color: @bg-color-grey_2;
 	text-align:       center;
 	border:           #459364 1px solid;
 	box-shadow:       @shadow-color 0 0 5px;
 	padding:          5px;
-	background-color: @bg-color-grey;
 	img {
 		margin: 0 auto;
 	}
@@ -123,3 +124,4 @@ footer {
 }
 @import "grid";
 @import "full-article";
+

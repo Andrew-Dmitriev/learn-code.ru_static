@@ -24,7 +24,7 @@
 		"browsersync-proxy": "browser-sync start --proxy 'localhost/learn-code.ru_static' 'dist' --files 'dist'",
 		"html_min": "html-minifier-terser ./index.html -o dist/index.html --collapse-whitespace --remove-comments --minify-css --minify-js true && html-minifier-terser --input-dir sections/ --output-dir dist/sections/ --collapse-whitespace --remove-comments --minify-css --minify-js true",
 		"less": "lessc ./styles/main.less ./styles/main.css",
-		"purifycss": "purifycss styles/main.css main.js index.html sections/**/*.html --min --info --out dist/main.css",
+		"purifycss": "purifycss styles/main.css pagefind-ui.js index.html sections/**/*.html --min --info --out dist/main.css",
 		"uglifyjs": "uglifyjs main.js --compress --toplevel -o ./dist/main.js",
 		"optimize_img": "imagemin img/new/ --plugin.webp.quality=60 --out-dir=./img/forDist/ && imagemin img/forDist/ --plugin.webp.quality=60 --out-dir=dist/img/",
 		"copy": "cp ./*.{ico,png,txt,xml} ./dist & mv ./img/new/*.* ./img/src/ & mkdir ./dist/img & cp ./img/forDist/*.* ./dist/img/ & cp -r ./fonts ./dist & cp ./img/*.* ./dist/img/ & cp ./.htaccess ./dist"
