@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		@font-face {
+			font-family: 'fira_code';
+			src: url('../../fonts/firacode-medium.woff2') format('woff2');
+			font-display: swap;
+			font-weight: 500;
+			font-style: normal;
+		}
+		@font-face {
+			font-family: 'sf_regular';
+			src: url('../../fonts/sf-ui-display-regular.woff2') format('woff2');
+			font-display: swap;
+			font-weight: normal;
+			font-style: normal;
+		}
+		html {
+			font-family: "sf_regular", "Arial", sans-serif;
+			font-size: 16px;
+		}
+		body {
+			background-color: #0c2a31;
+		}
+		img {
+			max-width: 100%;
+			height: auto;
+		}
+		.visually-hidden {
+			clip: rect(0 0 0 0);
+			clip-path: inset(50%);
+			height: 1px;
+			width: 1px;
+			overflow: hidden;
+			position: absolute;
+			white-space: nowrap;
+		}
+	</style>
+	<link rel="stylesheet" href="../../main.css">
+	<!--suppress HtmlUnknownTarget -->
+	<script src="../../pagefind/pagefind-ui.js" defer></script>
+	<script src="../../main.js" defer></script>
+	<title>CSS</title>
+	<link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="../../apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="../../apple-touch-icon-72x72.png">
+	<link rel="canonical" href="https://learn-code.ru/sections/scc/section-css.html">
+	<meta name="description" content="Раздел о каскадных таблицах стилей (CSS). Полезные советы, гайды, новшества и новости связанные с CSS.">
+	<meta name="theme-color" content="#37a6f0">
+	<meta name="msapplication-navbutton-color" content="#37a6f0">
+	<meta name="apple-mobile-web-app-title" content="Learn code">
+	<meta name="apple-mobile-web-app-status-bar-style" content="#37a6f0">
+	<meta name="geo.region" content="RU-NGR">
+	<meta name="rating" content="General">
+	<meta name="robots" content="index,follow">
+	<meta name="googlebot" content="index,follow">
+	<meta name="bingbot" content="index,follow">
+	<meta name="HandheldFriendly" content="true">
+	<meta property="og:site_name" content="learn-code.ru">
+	<meta property="article:published_time" content="2024-12-01T22:22:22+03:00">
+	<meta property="article:author" content="Andrew Dmitriev">
+	<meta property="article:section" content="CSS">
+	<meta property="og:title" content="Каскадные таблицы стилей">
+	<meta property="og:description" content="Раздел о каскадных таблицах стилей (CSS). Полезные советы, гайды, новшества и новости связанные с CSS.">
+	<meta property="article:tag" content="Styles">
+	<meta property="og:image" content="../../img/section-css.webp">
+	<meta property="og:image:width" content="1200">
+	<meta property="og:image:height" content="630">
+</head>
+<body>
+<h1 class="visually-hidden">
+	Каскадные таблицы стилей CSS
+</h1>
+<header>
+	<a href="../../index.html" title="Перейти на главную страницу">
+		<!--suppress HtmlUnknownTarget -->
+		<img src="../../img/header-logo.webp" width="576" height="139"
+				 srcset="../../img/header-logo_2x.webp 2x" alt="Логотип сайта с надписью Learn">
+	</a>
+	<nav aria-label="Главная">
+		<ul>
+			<li>
+				<a href="../html/section-html.html">HTML</a>
+			</li>
+			<li>
+				<a class="unactive" title="Ссылка на текущую страницу, не активна" href="#">
+					Css
+				</a>
+			</li>
+			<li>
+				<a href="../javascript/section-javascript.html">JavaScript</a>
+			</li>
+			<li>
+				<a href="../etc/section-etc.html" title="Разное">Etc</a>
+			</li>
+		</ul>
+	</nav>
+	<div id="search" aria-label="Поиск по сайту"></div>
+</header>
+<main>
+	<h2>Последние статьи раздела CSS</h2>
+	<article itemscope itemtype="https://schema.org/NewsArticle">
+		<!--		TODO удалить статью Как быстро выучить HTML, она из другого раздела-->
+		<h3 itemprop="headline">Как быстро выучить HTML?</h3>
+		<a href="../html/kak-bystro-vyuchit-html.html">
+			<figure>
+				<!--suppress HtmlUnknownTarget -->
+				<img itemprop="image" width="350" height="350"
+						 src="../../img/kak-bystro-vyuchit-html_preview.webp"
+						 srcset="../../img/kak-bystro-vyuchit-html_preview_x2.webp 2x"
+						 alt="Логотип языка разметки html версии 5">
+				<figcaption>
+					Быстрые способы изучения языка разметки HTML
+				</figcaption>
+			</figure>
+		</a>
+		<p class="publish-date">
+			Дата публикации:
+			<time itemprop="datePublished" content="2024-12-02T22:22:22+03:00"
+						datetime="2024-12-02T22:22:22+03:00">
+				02 декабря 2024 года
+			</time>
+		</p>
+	</article>
+</main>
+<aside>
+	<section>
+		<h4 class="visually-hidden">
+			Информация от партнёров
+		</h4>
+		<figure>
+			<a href="https://eurobyte.ru/?referer=173564"
+				 target="_blank" rel="nofollow,sponsored">
+				<!--suppress HtmlUnknownTarget -->
+				<img src="../../img/promo_eurobyte_512x512.webp" width="512" height="512"
+						 srcset="../../img/promo_eurobyte_512x512_x2.webp 2x"
+						 loading="lazy" alt="Промо баннер хостинга Евробайт">
+			</a>
+			<figcaption>
+				Надёжный и недорогой хостинг, проверенный временем.
+			</figcaption>
+		</figure>
+	</section>
+</aside>
+<footer itemscope itemtype="https://schema.org/Person">
+	<p itemprop="author">
+		&copy; 2024 Разработка и оформление сайта <span itemprop="name">Andrew Dmitriev</span>
+		<a itemprop="email" rel="nofollow,noindex" href="mailto:mai.@learn-code.ru">
+			&#128231; Контакты
+		</a>
+	</p>
+</footer>
+</body>
+</html>

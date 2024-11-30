@@ -4,18 +4,6 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<style>
-		.visually-hidden {
-			clip: rect(0 0 0 0);
-			clip-path: inset(50%);
-			height: 1px;
-			width: 1px;
-			overflow: hidden;
-			position: absolute;
-			white-space: nowrap;
-		}
-		body {
-			background-color: #0c2a31;
-		}
 		@font-face {
 			font-family: 'fira_code';
 			src: url('../../fonts/firacode-medium.woff2') format('woff2');
@@ -29,6 +17,26 @@
 			font-display: swap;
 			font-weight: normal;
 			font-style: normal;
+		}
+		html {
+			font-family: "sf_regular", "Arial", sans-serif;
+			font-size: 16px;
+		}
+		body {
+			background-color: #0c2a31;
+		}
+		img {
+			max-width: 100%;
+			height: auto;
+		}
+		.visually-hidden {
+			clip: rect(0 0 0 0);
+			clip-path: inset(50%);
+			height: 1px;
+			width: 1px;
+			overflow: hidden;
+			position: absolute;
+			white-space: nowrap;
 		}
 	</style>
 	<link rel="stylesheet" href="../../main.css">
@@ -68,7 +76,10 @@
 <header>
 	<a href="../../index.html" title="Перейти на главную страницу">
 		<!--suppress HtmlUnknownTarget -->
-		<img src="../../img/header-logo_537x240.webp" alt="Логотип сайта с надписью Learn">
+		<img width="537" height="240"
+				 src="../../img/header-logo_537x240.webp"
+				 srcset="../../img/header-logo_x2.webp"
+				 alt="Логотип сайта с надписью Learn">
 	</a>
 	<nav aria-label="Главная">
 		<ul>
@@ -99,9 +110,9 @@
 		</h2>
 		<!--suppress HtmlUnknownTarget -->
 		<img itemprop="image" width="1200" height="630"
-						 src="../../img/kak-bystro-vyuchit-html.webp"
-						 srcset="../../img/kak-bystro-vyuchit-html_preview_x2.webp x2"
-						 alt="Разноцветная аббревиатура HTML, на фоне, который стилизован под древесную текстуру">
+				 src="../../img/kak-bystro-vyuchit-html.webp"
+				 srcset="../../img/kak-bystro-vyuchit-html_preview_x2.webp x2"
+				 alt="Разноцветная аббревиатура HTML, на фоне, который стилизован под древесную текстуру">
 		<p>
 			Нет лучшего времени, чем сейчас, чтобы изучить HTML. Его фундаментальное понимание необходимо, если вы думаете о карьере в веб-дизайне или веб-разработке или даже если вы просто хотите научиться создавать отличные веб-сайты. HTML широко рассматривается как отраслевой стандарт и фактически не имеет серьёзных конкурентов как язык разметки. В этой статье мы порассуждаем, как быстро выучить язык HTML.
 		</p>

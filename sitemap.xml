@@ -1,43 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
-		<loc>https://learn-code.ru/</loc>
+		<loc>https://learn-code.ru/index.html</loc>
 		<lastmod>2024-12-01T22:22:22+03:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>1</priority>
 	</url>
 	<url>
-		<loc>https://learn-code.ru/sections/css/css.html</loc>
+		<loc>https://learn-code.ru/sections/css/section-css.html</loc>
 		<lastmod>2024-12-01T22:22:22+03:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.8</priority>
 	</url>
 	<url>
-		<loc>https://learn-code.ru/sections/etc/etc.html</loc>
+		<loc>https://learn-code.ru/sections/etc/section-etc.html</loc>
 		<lastmod>2024-12-01T22:22:22+03:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.8</priority>
 	</url>
 	<url>
-		<loc>https://learn-code.ru/sections/html/html.html</loc>
+		<loc>https://learn-code.ru/sections/html/section-html.html</loc>
 		<lastmod>2024-12-01T22:22:22+03:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.8</priority>
 	</url>
 	<url>
-		<loc>https://learn-code.ru/sections/javascript/javascript.html</loc>
+		<loc>https://learn-code.ru/sections/javascript/section-javascript.html</loc>
 		<lastmod>2024-12-01T22:22:22+03:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.8</priority>
 	</url>
 	<url>
-		<loc>https://learn-code.ru/sections/etc/kak-bystro-vyuchit-html.html</loc>
-		<lastmod>2024-12-01T22:22:22+03:00</lastmod>
+		<loc>https://learn-code.ru/sections/html/kak-bystro-vyuchit-html.html</loc>
+		<lastmod>2024-12-02T22:22:22+03:00</lastmod>
 		<changefreq>monthly</changefreq>
 	</url>
 	<url>
 		<loc>https://learn-code.ru/sections/etc/samie-populyarnye-yazyki-programmirovaniya.html</loc>
-		<lastmod>2024-12-01T22:22:22+03:00</lastmod>
+		<lastmod>2024-12-02T22:22:22+03:00</lastmod>
 		<changefreq>monthly</changefreq>
 	</url>
 </urlset>
